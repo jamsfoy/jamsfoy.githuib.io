@@ -1,53 +1,74 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tufte + GSAP Notebook</title>
-    <meta name="description" content="Tufte layout with gentle text animations that respect reduced motion.">
-    <!-- Tufte CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css">
-    <!-- (Optional) a tiny helper so images scale well -->
-    <style>
-      img{ max-width:100%; height:auto }
-      .line{ opacity:1 } /* start visible; we'll animate from 0 for non-motion users */
-      </style>
-      </head>
-      <body>
-        <article>
-          <h1 class="title">The City Without a Hum</h1>
-          <section>
-            <p class="line">The fridges exhale once and fall quiet.</p>
-            <p class="line">Somewhere a generator disagrees.</p>\
-            <p class="line">
-              The lift is a still pond
-              <label for="sn-2" class="margin-toggle sidenote-number"></label>
-              <input type="checkbox" id="sn-2" class="margin-toggle">
-              <span class="sidenote">Sidenotes still work: use them for subtext, translations, or citations.</span>
-              </p>
-              <p class="line">We hear our steps remembering the shape of the street.</p>
-              </section>
-              <section>
-                <p>⊕ A margin note can explain the creative choice.
-                  <label for="mn-2" class="margin-toggle">&#8853;</label>
-                  <input type="checkbox" id="mn-2" class="margin-toggle">
-                  <span class="marginnote">The fade-in below is slow and subtle; it will be skipped for readers who prefer less motion.</span>
-                  </p>
-                  </section>
-                  </article>
-                  <!-- GSAP (via cdnjs) -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-        <script>
-          // Respect readers who prefer less motion     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; 
-          if (!prefersReduced && window.gsap) {       // Fade in each .line softly, one after the other 
-           gsap.from(".line", {
-             opacity: 0, 
-             y: 8,
-             duration: 0.6,
-             stagger: 0.25,
-             ease: "power1.out"
-             });
-            }
-          </script>
-          </body>
-          </html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Algorithm Scrolls On</title>
+  <meta name="description" content="A Tufte-style layout with GSAP animations for a reflective narrative on identity and algorithms.">
+  <!-- Tufte CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css">
+  <!-- Optional helper for responsive images -->
+  <style>
+    img { max-width: 100%; height: auto; }
+    .line { opacity: 1; } /* start visible; we'll animate from 0 for non-motion users */
+  </style>
+</head>
+<body>
+  <article>
+    <h1 class="title">The Algorithm Scrolls On</h1>
+    <section>
+      <p class="line">Liam scrolls through Instagram.</p>
+      <p class="line">The glow of his phone paints his face in cold blue light.</p>
+      <p class="line">Each post promises a better home, a better life—perfectly staged rooms, smiling strangers in curated spaces.</p>
+      <p class="line">The Algorithm whispers with every swipe: This could be yours.</p>
+      <p class="line">AD: "Brighten your evenings with modern simplicity". Liam presses Buy Now.</p>
+      <p class="line">Two days later, it stands in his living room - white, sleek and silent. Its glow feels less like warmth and more like surveillance.</p>
+      <p class="line">The algorithm scrolls on. AD: "Handcrafted wood, authentic charm". The table arrives, heavy and sharp, with a foreign scent.</p>
+      <p class="line">It looks very natural, but not for Liam.</p>
+      <p class="line">The algorithm scrolls on. AD: "Luxury comfort, now 20% off."</p>
+      <p class="line">When the sofa arrives, it consumes the room. Plush, rich, inviting. But he feels like a guest in his own house.</p>
+      <p class="line">The algorithm scrolls on. AD: "Low maintenance. Maximum style". Little glass orbs sit on his windowsill, arranged like props on a set.</p>
+      <p class="line">The algorithm scrolls on. AD: "Bold colours. Make a statement." Hung on his wall, it stares back at him. Demanding attention, drowning him out.</p>
+      <p class="line">The algorithm scrolls on. AD: "Clean lines. Endless space for books you'll never read”. He assembles it late at night. When it stands tall, the room feels emptier, colder. Like it belongs to someone else.</p>
+      <p class="line">The algorithm scrolls on. AD: "Timeless design. Transform your space". The rug unfurls, swallowing the floor.</p>
+      <p class="line">Each step feels unknown. As though he's walking in someone else's shoes.</p>
+      <p class="line">The algorithm scrolls on. AD: "Your home, but smarter." It arrives quickly, waiting for his voice. The house answers when he speaks. But he doesn't feel heard.</p>
+      <p class="line">The algorithm scrolls on. The house is full now. Every corner, every shelf, every wall is dressed in someone else's choices.</p>
+      <p class="line">Liam slumps into his velvet sofa. The rug beneath his feet feels cold. The lamp hums faintly. The bookshelf towers. The smart speaker blinks, listening.</p>
+      <p class="line">The room looks perfect. It looks nothing like the place that Liam once called home.</p>
+      <p class="line">And in that moment, he realises,</p>
+      <p class="line">He is not who he was when he first opened the app.</p>
+      <p class="line">The algorithm has not only furnished his house, it has furnished his identity.</p>
+      <p class="line">But the phone still glows in his hand. Another post waits, eager for his thumb.</p>
+      <p class="line">The screen goes black. For the first time, the house is silent.</p>
+      <p class="line">Liam looks around, uneasy but free.</p>
+      <p class="line">He tries to remember what he wanted before the feed told him who to be.</p>
+      <p class="line">The algorithm waits in the dark, patient, certain he will return.</p>
+      <p class="line">Liam’s house was never really his. Each item was chosen for him, not by him.</p>
+      <p class="line">That’s what algorithms do: they don’t just shape your feed, they shape you.</p>
+      <p class="line">The real danger isn’t buying things you don’t need,</p>
+      <p class="line">It’s becoming someone you never chose to be.</p>
+      <p class="line">So ask yourself: will you keep scrolling? Or will you put the phone down?</p>
+    </section>
+  </article>
+
+  <!-- GSAP (via cdnjs) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+  <script>
+    // Respect readers who prefer less motion
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReduced && window.gsap) {
+      // Fade in each .line softly, one after the other
+      gsap.from(".line", {
+        opacity: 0,
+        y: 8,
+        duration: 0.6,
+        stagger: 0.25,
+        ease: "power1.out"
+      });
+    }
+  </script>
+</body>
+</html>
